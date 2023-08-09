@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Enrollment Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h2>Employee Form using the JPDB API</h2>
+        </div>
+        <h2>Employee Form</h2>
+        <form id="empForm" method="get">
+            <div class="form-group">
+                <label for="empid">Employee ID:</label>
+                <input type="text" class="form-control" id="empid" name="empid" placeholder="Enter Employee ID" onchange="getEmp()">
+            </div>
+            <div class="form-group">
+                <label for="empname">Employee Name:</label>
+                <input type="text" class="form-control" id="empname" name="empname" placeholder="Enter Employee Name" >
+            </div>
+            <div class="form-group">
+                <label for="empsal">Salary:</label>
+                <input type="number" class="form-control" id="empsal" name="empsal" placeholder="Enter Salary" >
+            </div>
+            <div class="form-group">
+                <label for="empHRA">HRA:</label>
+                <input type="number" class="form-control" id="hra" name="hra" placeholder="Enter HRA" >
+            </div>
+            <div class="form-group">
+                <label for="empDA">DA:</label>
+                <input type="number" class="form-control" id="da" name="da" placeholder="Enter DA" >
+            </div>
+            <div class="form-group">
+                <label for="empDeduction">Deduction:</label>
+                <input type="number" class="form-control" id="empDeduction" name="empDeduction" placeholder="Enter Deduction">
+            </div>
+            <div class="form-group text-center">
+                <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                <button type="button" class="btn btn-lg btn-danger" id="change" onclick="changeData()"disabled>Change</button>
+                <button type="button" class="btn btn-lg btn-danger" id="reset" onclick="resetForm()"disabled>Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
